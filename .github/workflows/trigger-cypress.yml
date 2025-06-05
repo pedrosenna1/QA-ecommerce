@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Verificar token (debug temporário)
+        run: echo "Token lido (oculto por segurança)"
       - name: Disparar testes no repositório Cypress
         uses: peter-evans/repository-dispatch@v2
         with:
