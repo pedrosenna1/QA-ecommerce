@@ -1,0 +1,18 @@
+name: Trigger Cypress Tests
+
+on:
+  push:
+    branches:
+      - master  # ou main, dependendo da sua branch
+
+jobs:
+  trigger-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Disparar testes no repositório Cypress
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.CYPRESS_PAT }}
+          repository: pedrosenna1/CypressAutomation
+          event-type: run-cypress-tests
