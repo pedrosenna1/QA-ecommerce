@@ -3,7 +3,7 @@ name: Trigger Cypress Tests
 on:
   push:
     branches:
-      - master  # ou main, dependendo da sua branch
+      - main  # ou main, dependendo da sua branch
 
 jobs:
   trigger-tests:
